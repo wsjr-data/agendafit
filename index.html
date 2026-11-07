@@ -5,7 +5,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>AgendaFit - Gestão para Personal Trainers</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/index.js" defer></script>
 
 </head>
 
@@ -14,6 +18,10 @@
     <!-- cabeçalho -->
     <header class="cabecalho">
 
+            <a href="#inicio">
+                <img src="fotos/Logomarca.webp" alt="Logo AgendaFit" class="logo">
+            </a>
+            
         <nav>
 
             <ul>
@@ -37,16 +45,114 @@
     <main>
 
         <!-- Inicio -->
-        <section id="inicio">
+        <section id="inicio" class="hero">
 
-            <p>inicio</p>
+            <div class="hero-conteudo">
+
+                <!-- Título principal -->
+                <h1 class="titulo-principal">Organize seus alunos e treinos em <span class="destaque-gradiente">um só lugar</span></h1>
+
+                <!-- Subtítulo / Descrição -->
+                <p class="paragrafo-descricao">Chega de perder horas com planilhas confusas e conversas perdidas no WhatsApp. Centralize fichas de treino, agenda e pagamentos em uma plataforma feita para impulsionar sua carreira de personal trainer.</p>
+
+                <!-- Botões de Ação (CTAs) -->
+                <div class="hero-botoes">
+                    <a href="#planos" class="btn-hero btn-primario">Começar Agora</a>
+                    <a href="#funcionalidade" class="btn-hero btn-secundario">Conhecer Recursos</a>
+                </div>
+
+            </div>
+
+            <!-- Imagem de Destaque -->
+            <div class="hero-imagem">
+
+                <img src="fotos/imagem_hero.webp" alt="Demonstração da plataforma AgendaFit em celular e computador">
+
+            </div>
 
         </section>
 
          <!-- sobre -->
-        <section id="sobre">
+        <section class="sobre" id="sobre">
 
-            <p>Sobre</p>
+            <h2>Sobre o AgendaFit</h2>
+
+            <h3>Transformando a gestão de treinos com inteligência e simplicidade</h3>
+
+            <p>O <strong>AgendaFit</strong> nasceu da necessidade de libertar os profissionais de educação física das tarefas burocráticas e repetitivas. Sabemos que o seu tempo deve ser investido onde realmente gera valor: na evolução e no cuidado com seus alunos.</p>
+
+            <p>Combinamos organização intuitiva e recursos modernos de Inteligência Artificial para que você gerencie agendas, fichas de treino e comunicação em uma única plataforma prática e acessível.</p>
+
+                <!-- Carrossel Infinito de Diferenciais -->
+                <div class="carrossel-container">
+
+                    <div class="diferenciais">
+
+                        <!-- Grupo 1 de Cards -->
+                        <div class="card-diferencial">
+                            <h4>Mais Tempo Livre</h4>
+                            <p>Diga adeus às planilhas manuais e à perda de mensagens no WhatsApp.</p>
+                        </div>
+
+                        <div class="card-diferencial">
+                            <h4>Gestão Centralizada</h4>
+                            <p>Tenha o histórico, treinos e compromissos de cada aluno ao alcance de poucos cliques.</p>
+                        </div>
+
+                        <div class="card-diferencial">
+                            <h4>Tecnologia & IA</h4>
+                            <p>Automações inteligentes e assistente virtual para acelerar sua rotina profissional.</p>
+                        </div>
+
+                        <div class="card-diferencial">
+                            <h4>Controle Financeiro</h4>
+                            <p>Acompanhe pagamentos, mensalidades e receba alertas automáticos para evitar a inadimplência.</p>
+                        </div>
+
+                        <div class="card-diferencial">
+                            <h4>Evolução dos Alunos</h4>
+                            <p>Acompanhe o progresso com métricas claras, histórico de cargas e avaliações físicas completas.</p>
+                        </div>
+
+                        <div class="card-diferencial">
+                            <h4>Comunicação Integrada</h4>
+                            <p>Envie treinos, avisos e lembretes automáticos diretamente no WhatsApp do seu aluno.</p>
+                        </div>
+
+                        <!-- Grupo 2 (Cópia idêntica para o loop infinito não ter pulos) -->
+                        <div class="card-diferencial">
+                            <h4>Mais Tempo Livre</h4>
+                            <p>Diga adeus às planilhas manuais e à perda de mensagens no WhatsApp.</p>
+                        </div>
+
+                        <div class="card-diferencial">
+                            <h4>Gestão Centralizada</h4>
+                            <p>Tenha o histórico, treinos e compromissos de cada aluno ao alcance de poucos cliques.</p>
+                        </div>
+
+                        <div class="card-diferencial">
+                            <h4>Tecnologia & IA</h4>
+                            <p>Automações inteligentes e assistente virtual para acelerar sua rotina profissional.</p>
+                        </div>
+
+                        <div class="card-diferencial">
+                            <h4>Controle Financeiro</h4>
+                            <p>Acompanhe pagamentos, mensalidades e receba alertas automáticos para evitar a inadimplência.</p>
+                        </div>
+
+                        <div class="card-diferencial">
+                            <h4>Evolução dos Alunos</h4>
+                            <p>Acompanhe o progresso com métricas claras, histórico de cargas e avaliações físicas completas.</p>
+                        </div>
+
+                        <div class="card-diferencial">
+                            <h4>Comunicação Integrada</h4>
+                            <p>Envie treinos, avisos e lembretes automáticos diretamente no WhatsApp do seu aluno.</p>
+                        </div>
+
+                    </div>
+
+                </div>
 
         </section>
 
@@ -74,17 +180,73 @@
     </main>
 
     <!-- Rodapé -->
-    <footer>
+    <footer class="rodape">
 
-        <p>Rodapé</p>
+         <div class="rodape-container">
+        
+            <!-- Coluna 1: Sobre a Marca -->
+            <div class="rodape-coluna">
+                <h3>AgendaFit</h3>
+                <p>Gestão inteligente para personal trainers. Organize alunos, treinos e compromissos com o poder da tecnologia e da IA.</p>
+            </div>
+ 
+            <!-- Coluna 3: Contato & Suporte -->
+            <div class="rodape-coluna">
+
+                <h4>Contato</h4>
+
+                <ul>
+
+                    <li><span>Email:</span> suporte@agendafit.com.br</li>
+
+                    <li><span>WhatsApp:</span> (11) 99999-9999</li>
+
+                    <li><span>Atendimento:</span> Seg a Sex, das 8h às 18h</li>
+
+                </ul>
+
+            </div>
+
+            <!-- Coluna 4: Redes Sociais / Legal -->
+            <div class="rodape-coluna">
+
+                <h4>Redes Sociais</h4>
+
+                <div class="redes-sociais">
+
+                    <a href="#">Instagram</a>
+
+                    <a href="#">LinkedIn</a>
+
+                    <a href="#">YouTube</a>
+
+                </div>
+
+                <div class="links-legais">
+
+                    <a href="#inicio">Termos de Uso</a> | <a href="#inicio">Privacidade</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Linha Inferior: Copyright e Créditos Acadêmicos -->
+        <div class="rodape-inferior">
+
+            <p>&copy; 2026 AgendaFit. Todos os direitos reservados.</p>
+
+        </div>
+
+            <!-- assistente -->
+        <div>
+
+            <p>Colocar o assistente</p>
+
+        </div>
 
     </footer>
-
-    <div>
-
-        <p>Colocar o assistente</p>
-
-    </div>
 
 </body>
 </html>

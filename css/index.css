@@ -1,0 +1,392 @@
+/* ===================================================
+                        CABEÇALHO
+   =================================================== */
+
+
+   /* zera as margens do navegador para o site encostar 100% nas bordas da tela */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+   /* controla a logo */
+.logo{
+
+    height: 75px;           /*Define altura da logo*/
+    width: auto;            /*Define largura da logo*/
+    
+}
+
+/* controla o cabeçalho*/
+.cabecalho {
+
+    display: flex; /*Transforma o cabeçalho em um container flexbox*/
+    justify-content: space-between; /* joga a logo para um lado e os itens do menu para o outro */
+    align-items: center;    /* Alinha a logo e os itens do menu verticalmente ao centro */
+
+}
+
+/*controla apenas os itens do menu (inicio,sobre etc) NÃO o cabeçalho em si*/
+.cabecalho nav ul{
+
+    list-style: none; /*tira as bolinha dos itens*/
+    display: flex;  /* Coloca as opções (Início, Sobre...) lado a lado */
+    gap: 20px; /* Dá um espaço entre cada palavra */
+
+}
+
+/* controla os links específicos do menu */
+.cabecalho nav ul li a {
+    text-decoration: none;         /* Tira o sublinhado dos links */
+    color: #131b2e;                /* Muda a cor padrão do link (de azul para o tom escuro do seu design) */
+    font-weight: 500;              /* Deixa o texto levemente encorpado */
+    padding: 10px 20px;
+    border-radius:  10px;
+    display: inline-block;
+    transition: all 0.25s ease;
+}
+
+/* efeito ao passar o mouse por cima do link */
+.cabecalho nav ul li a:hover {
+    background-color: #4F46E5;                /* Fica azul (Electric Indigo) quando passa o mouse */
+    color: #ffffff; 
+    transform: translateY(-2px);
+}
+
+
+/*controla o menu inteiro*/
+.cabecalho nav{
+
+    margin: 0 auto; /*centraliza o menu no  meio do cabeçalho (0 em cima/baixo e auto nas laterais)*/
+
+}
+
+/* ===================================================
+                        HERO
+   =================================================== */
+
+/* controla toda a seção principal (Hero) */
+.hero {
+    display: flex;                 /* Coloca o texto e a imagem lado a lado em flexbox */
+    align-items: center;           /* Alinha o texto e a foto no meio da altura vertical */
+    justify-content: space-between;/* Separa: texto na esquerda e foto na direita */
+    padding: 70px 5%;              /* Respiro elegante de 70px em cima/baixo e 5% nas laterais */
+    gap: 60px;                     /* Distância de 60px entre o texto e a foto */
+    min-height: 85vh;              /* Ocupa 85% da altura da tela visível */
+}
+/* controla a coluna que guarda todo o texto */
+.hero-conteudo {
+    flex: 1;                       /* Ocupa metade (50%) da largura da tela */
+}
+
+/* controla o título principal de impacto */
+.titulo-principal {
+    font-size: 3rem;               /* Tamanho imponente e moderno */
+    font-weight: 800;              /* Negrito bem forte */
+    line-height: 1.15;             /* Altura de linha ajustada para títulos grandes */
+    color: #131b2e;                /* Cor preta suave (tom escuro do guia) */
+    margin-bottom: 20px;           /* Afasta do parágrafo */
+}
+/* aplica o efeito de degradê colorido nas palavras 'um só lugar' */
+.destaque-gradiente {
+    background: linear-gradient(135deg, #4F46E5 0%, #10B981 100%); /* Degradê do azul para o verde */
+    -webkit-background-clip: text; /* Versão para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+    background-clip: text;         
+    -webkit-text-fill-color: transparent; /* Deixa o miolo da letra transparente no Chrome/Safari */
+    color: transparent;            /* Fallback padrão para garantir transparência */
+}
+/* controla o parágrafo de texto/descrição */
+.paragrafo-descricao {
+    font-size: 1.15rem;            /* Tamanho de leitura confortável */
+    line-height: 1.7;              /* Espaço agradável entre linhas */
+    color: #464555;                /* Tom cinza suave que não cansa a vista */
+    margin-bottom: 35px;           /* Afasta da caixinha de botões */
+    max-width: 580px;              /* Limita a largura para a leitura ficar fluida */
+}
+/* controla a caixinha onde ficam os dois botões */
+.hero-botoes {
+    display: flex;                 /* Coloca os dois botões lado a lado */
+    gap: 16px;                     /* Distância de 16px entre os botões */
+    margin-bottom: 25px;           /* Afasta da listinha de benefícios abaixo */
+    flex-wrap: wrap;               /* Quebra para baixo no celular caso a tela seja pequena */
+}
+/* estilo base que vale para TODOS os botões do hero */
+.btn-hero {
+    text-decoration: none;         /* Tira o sublinhado padrão dos links */
+    padding: 15px 32px;            /* Altura e largura ideais para o clique */
+    border-radius: 12px;           /* Cantos arredondados ergonômicos de 12px */
+    font-size: 1rem;               /* Tamanho da letra */
+    font-weight: 600;              /* Letra em negrito */
+    display: inline-block;         /* Permite largura e padding funcionarem */
+    transition: all 0.25s ease;    /* Transição suave ao passar o mouse */
+}
+/* BOTÃO PRINCIPAL (Começar Agora) */
+.btn-hero.btn-primario {
+    background-color: #10B981;     /* Verde de conversão (Kinetic Emerald) */
+    color: #ffffff;                /* Letra branca de alto contraste */
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35); /* Sombra verde de elevação */
+}
+.btn-hero.btn-primario:hover {
+    background-color: #059669;     /* Verde um pouco mais escuro ao passar o mouse */
+    transform: translateY(-3px);   /* Leve subida de 3px */
+    box-shadow: 0 12px 24px rgba(16, 185, 129, 0.45); /* Sombra expande dando efeito 3D */
+}
+/* BOTÃO SECUNDÁRIO (Conhecer Recursos) */
+.btn-hero.btn-secundario {
+    background-color: #ffffff;     /* Fundo branco limpo */
+    color: #131b2e;                /* Letra escura */
+    border: 1.5px solid #c7c4d8;   /* Borda cinza suave */
+}
+.btn-hero.btn-secundario:hover {
+    border-color: #4F46E5;         /* A borda fica azul no hover */
+    color: #4F46E5;                /* O texto fica azul no hover */
+    background-color: #f2f3ff;     /* Fundo levemente azulado */
+}
+
+/* controla a coluna da foto */
+.hero-imagem {
+    flex: 1;                       /* Ocupa a outra metade da tela */
+    display: flex;                 /* Flexbox para centralizar a imagem */
+    justify-content: center;       /* Centraliza a imagem na coluna dela */
+}
+/* FOTO DO HERO: Moldura moderna e sombra flutuante */
+.hero-imagem img {
+    width: 100%;                   /* Largura flexível */
+    max-width: 620px;              /* Limite máximo para ficar harmônica */
+    height: auto;                  /* Altura automática sem distorcer */
+    border-radius: 20px;           /* Cantos bem arredondados modernos */
+    border: 1px solid #e2e7ff;     /* Bordinha fina que dá acabamento */
+    box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.16); /* Sombra 3D suave flutuante */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+/* leve zoom ao passar o mouse na foto */
+.hero-imagem img:hover {
+    transform: scale(1.02);        /* Cresce 2% suavemente */
+}
+
+/* ===================================================
+                        SOBRE
+   =================================================== */
+
+  /* controla a seção Sobre inteira */
+.sobre {
+    padding: 80px 5%;              /* Espaçamento interno (80px em cima/baixo e 5% nas laterais) */
+    background-color: #ffffff;     /* Fundo branco puro para contrastar com o fundo do site */
+    text-align: center;            /* Centraliza os textos principais */
+}
+
+/* subtítulo menor / identificador da seção */
+.sobre h2 {
+    color: #4F46E5;                /* Azul Electric Indigo da sua paleta */
+    font-size: 1rem;               /* Tamanho menor para funcionar como categoria */
+    text-transform: uppercase;     /* Deixa em letras maiúsculas */
+    letter-spacing: 0.08em;        /* Espaço moderno entre as letras */
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* título principal da seção Sobre */
+.sobre h3 {
+    color: #131b2e;                /* Cor escura forte */
+    font-size: 2.2rem;             /* Tamanho de destaque */
+    font-weight: 800;
+    line-height: 1.3;
+    max-width: 750px;              /* Limita a largura para o texto não ficar esticado demais */
+    margin: 0 auto 25px auto;      /* Centraliza o título no meio da página */
+}
+
+/* parágrafos explicativos do Sobre */
+.sobre p {
+    color: #464555;                /* Cinza suave para leitura agradável */
+    font-size: 1.1rem;
+    line-height: 1.7;              /* Espaçamento confortável entre linhas */
+    max-width: 750px;              /* Mantém o texto em uma coluna elegante e centralizada */
+    margin: 0 auto 20px auto;
+}
+
+/* controla a janela externa do carrossel (esconde os cards que passam da tela) */
+.carrossel-container {
+    overflow: hidden;              /* Esconde a barra de rolagem horizontal e corta os cards nas bordas */
+    width: 100%;                   /* Ocupa a largura total da tela */
+    margin-top: 50px;              /* Afasta o carrossel dos parágrafos de cima */
+    padding: 20px 0;               /* Respiro em cima/baixo para a sombra dos cards não ser cortada */
+}
+/* controla a 'esteira rolante' que segura todos os cards */
+.diferenciais {
+    display: flex;                 /* Coloca todos os cards em uma única linha infinita */
+    gap: 25px;                     /* Distância de 25px entre cada card */
+    width: max-content;            /* Faz a esteira ter a largura exata de todos os cards juntos */
+    animation: rolarCarrossel 28s linear infinite; /* Rola continuamente em 28 segundos de forma suave e infinita */
+}
+/* MÁGICA: pausa a rolagem quando o usuário coloca o mouse em cima de qualquer card */
+.diferenciais:hover {
+    animation-play-state: paused;  /* PAUSA a animação no segundo que o mouse entra e volta quando sai */
+}
+/* controla cada card individual de diferencial */
+.card-diferencial {
+    flex-shrink: 0;                /* OBRIGATÓRIO: impede os cards de serem espremidos na tela */
+    width: 310px;                  /* Largura fixa perfeita para cada card */
+    background-color: #ffffff;     /* Fundo branco puro de destaque */
+    border: 1px solid #e2e7ff;     /* Bordinha sutil */
+    border-radius: 18px;           /* Cantos arredondados de 18px */
+    padding: 30px 24px;            /* Espaço interno para respirar */
+    text-align: left;              /* Alinha os textos do card à esquerda */
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04); /* Sombra suave */
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; /* Transições suaves */
+    cursor: pointer;               /* Transforma o cursor na mãozinha de clique */
+}
+/* efeito ao passar o mouse em um card específico */
+.card-diferencial:hover {
+    transform: translateY(-8px);   /* O card dá uma levantadinha charmosa de 8px */
+    border-color: #4F46E5;         /* A borda fica no azul oficial da marca */
+    box-shadow: 0 16px 30px -4px rgba(79, 70, 229, 0.18); /* Sombra azulada viva */
+}
+/* controla o título dentro de cada card */
+.card-diferencial h4 {
+    color: #131b2e;                /* Cor preta suave da sua paleta */
+    font-size: 1.25rem;            /* Tamanho de destaque */
+    font-weight: 700;              /* Letra em negrito */
+    margin-bottom: 12px;           /* Empurra o texto explicativo para baixo */
+}
+/* controla o texto explicativo dentro do card */
+.card-diferencial p {
+    color: #464555;                /* Tom cinza suave */
+    font-size: 0.95rem;            /* Tamanho compacto e confortável */
+    line-height: 1.6;              /* Espaço agradável entre linhas */
+    margin: 0;                     /* Zera margens extras */
+    background: none;              /* Garante que não herde caixas de fundo */
+    border: none;                  /* Garante que não herde bordas */
+    padding: 0;                    /* Garante que não herde paddings */
+    box-shadow: none;              /* Garante que não herde sombras */
+}
+/* ANIMAÇÃO: define o movimento contínuo da esteira da direita para a esquerda */
+@keyframes rolarCarrossel {
+    0% {
+        transform: translateX(0);  /* Começa na posição inicial zero */
+    }
+    100% {
+        transform: translateX(-50%); /* Anda exatamente até a metade (onde a cópia começa) */
+    }
+}
+
+/* ===================================================
+                        RODAPÉ
+   =================================================== */
+
+/* controla o rodapé inteiro */
+.rodape {
+
+    background-color: #131b2e;     /* Fundo escuro moderno da sua paleta de cores */
+    color: #e2e7ff;                /* Cor clara para os textos não cansarem a vista */
+    padding: 20px 0 15px 0;              /* Respiro de 20px no topo e 15px embaixo no rodapé */
+    font-size: 0.95rem;            /* Tamanho de leitura ideal para rodapés */
+    width: 100%;
+}
+
+/* controla o container que guarda as 3 colunas de conteúdo */
+.rodape-container {
+    display: flex;                 /* Transforma em flexbox e coloca as colunas lado a lado */
+    justify-content: space-between;/* Espalha as colunas de forma equilibrada pela tela */
+    gap: 40px;                     /* Espaço livre entre uma coluna e outra */
+    padding: 0 5% 20px 5%;         /* Espaçamento lateral de 5% e 20px antes da linha inferior */
+    flex-wrap: wrap;               /* Permite que as colunas se empilhem caso a tela seja pequena */
+}
+
+/* controla cada coluna individual do rodapé */
+.rodape-coluna {
+    flex: 1;                       /* Faz as colunas dividirem o espaço igualmente */
+    min-width: 220px;              /* Largura mínima para a coluna não ficar espremida no mobile */
+}
+
+/* controla o nome da marca (AgendaFit) na coluna 1 */
+.rodape-coluna h3 {
+    color: #ffffff;                /* Letra branca brilhante para a marca */
+    font-size: 1.5rem;             /* Tamanho maior para o logo em texto */
+    font-weight: 800;              /* Letra bem em negrito */
+    margin-bottom: 16px;           /* Afasta o texto explicativo para baixo */
+}
+
+/* controla os títulos das outras colunas (Contato, Redes Sociais) */
+.rodape-coluna h4 {
+    color: #ffffff;                /* Cor branca de alto contraste */
+    font-size: 1.1rem;             /* Tamanho do subtítulo */
+    font-weight: 700;              /* Letra em negrito */
+    margin-bottom: 18px;           /* Afasta a lista de links para baixo */
+}
+
+/* controla o parágrafo sobre a marca */
+.rodape-coluna p {
+    color: #c7c4d8;                /* Tom cinza suave */
+    line-height: 1.6;              /* Espaçamento agradável entre linhas */
+}
+
+/* controla as listas de contato dentro da coluna */
+.rodape-coluna ul {
+    list-style: none;              /* Remove as bolinhas da lista */
+    padding: 0;                    /* Zera o preenchimento padrão do navegador */
+    margin: 0;                     /* Zera as margens */
+}
+
+/* controla cada linha da lista de contato */
+.rodape-coluna ul li {
+    margin-bottom: 12px;           /* Espaço de respiro entre um contato e outro */
+    color: #c7c4d8;                /* Cor suave */
+}
+
+/* dá destaque aos rótulos (Email:, WhatsApp:) */
+.rodape-coluna ul li span {
+    color: #ffffff;                /* Deixa o rótulo em branco */
+    font-weight: 600;              /* Deixa o rótulo em negrito */
+}
+
+/* controla o bloco dos links de redes sociais */
+.redes-sociais {
+    display: flex;                 /* Coloca os links de redes sociais lado a lado */
+    gap: 12px;                     /* Espaço entre um link e outro */
+    margin-bottom: 20px;           /* Afasta dos links legais (Termos de Uso) */
+}
+
+/* controla os botões de redes sociais */
+.redes-sociais a {
+    text-decoration: none;         /* Remove o sublinhado do link */
+    color: #ffffff;                /* Cor branca */
+    background-color: #283044;     /* Caixinha cinza-azulada atrás de cada rede */
+    padding: 8px 14px;             /* Tamanho interno do botão */
+    border-radius: 8px;            /* Cantos arredondados */
+    font-size: 0.85rem;            /* Letra compacta */
+    font-weight: 600;
+    transition: all 0.2s ease;     /* Transição suave ao passar o mouse */
+}
+
+/* efeito ao passar o mouse nas redes sociais */
+.redes-sociais a:hover {
+    background-color: #4F46E5;     /* Fica azul Electric Indigo ao passar o mouse */
+    transform: translateY(-2px);   /* Leve levantada no botão */
+}
+
+/* controla os links legais (Termos de Uso e Privacidade) */
+.links-legais a {
+    color: #c7c4d8;                /* Tom cinza */
+    text-decoration: none;         /* Sem sublinhado */
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+/* efeito ao passar o mouse nos links legais */
+.links-legais a:hover {
+    color: #ffffff;                /* Fica branco quando passa o mouse */
+    text-decoration: underline;    /* Adiciona sublinhado sutil */
+}
+
+/* controla a linha inferior com o Copyright */
+.rodape-inferior {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória sutil e transparente */
+    text-align: center;            /* Centraliza o texto de direitos autorais no meio */
+    padding: 12px 5%;              /* Respiro em cima/baixo e laterais */
+    color: #777587;                /* Cor cinza discreta para o rodapé final */
+    margin: 0;
+    font-size: 0.85rem;
+}
