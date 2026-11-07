@@ -11,6 +11,8 @@
 
     <script src="js/index.js" defer></script>
 
+    <link rel="stylesheet" href="css/chat.css">
+
 </head>
 
 <body>
@@ -240,13 +242,36 @@
         </div>
 
             <!-- assistente -->
-        <div>
-
-            <p>Colocar o assistente</p>
-
-        </div>
 
     </footer>
+        <!-- Widget do Assistente Léo -->
+        <div id="chat-widget" class="chat-widget">
+    <button id="chat-toggle" class="chat-toggle">
+    <img src="fotos/leo_avatar.png" alt="Léo AI" class="avatar-icon">
+    <span>Conversar com o Léo</span>
+    </button>
+  
+        <div id="chat-box" class="chat-box hidden">
+        <div class="chat-header">
+        <div class="chat-header-info">
+        <img src="fotos/leo_avatar.png" alt="Léo AI" class="avatar-header">
+        <div>
+          <strong>Léo</strong>
+          <span class="status-online">● Online</span>
+        </div>
+        </div>
+      <button id="chat-close">&times;</button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+      <div class="message bot">Olá! Sou o Léo, assistente inteligente do AgendaFit. Como posso ajudar você hoje?</div>
+        </div>
+    <form id="chat-form" class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Digite sua dúvida..." required autocomplete="off" />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
 
+    <script src="js/chat.js"></script>
 </body>
 </html>
