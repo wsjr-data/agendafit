@@ -7,6 +7,10 @@
 
     <title>AgendaFit - Gestão para Personal Trainers</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+
     <link rel="stylesheet" href="css/index.css">
 
     <script src="js/index.js" defer></script>
@@ -23,10 +27,16 @@
     <header class="cabecalho">
 
             <a href="#inicio">
-                <img src="fotos/Logomarca.webp" alt="Logo AgendaFit" class="logo">
+                <img src="fotos/logo.png" alt="Logo AgendaFit" class="logo">
             </a>
             
-        <nav>
+        <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="menu-principal">
 
             <ul>
 
@@ -37,6 +47,8 @@
                 <li><a href="#funcionalidade">Funcionalidades</a></li>
 
                 <li><a href="#planos">Planos</a></li>
+
+                <li><a href="#faq">FAQ</a></li>
 
                 <li><a href="#contato">Contato</a></li>
 
@@ -161,23 +173,206 @@
         </section>
 
         <!-- Funcionalidades -->
-        <section id="funcionalidade">
+        <section id="funcionalidade" class="secao secao-clara">
 
-            <p>Funcionalidades</p>
+            <div class="sec-cabecalho">
+                <span class="sec-etiqueta">Funcionalidades</span>
+                <h2 class="sec-titulo">Tudo que você precisa para gerenciar seus alunos</h2>
+                <p class="sec-subtitulo">Ferramentas pensadas para a rotina do personal trainer, da primeira avaliação ao pagamento da mensalidade.</p>
+            </div>
+
+            <div class="grade-recursos">
+
+                <article class="recurso">
+                    <h3>Agenda Inteligente</h3>
+                    <p>Marque treinos, veja os horários do dia e evite conflitos com alertas automáticos.</p>
+                </article>
+
+                <article class="recurso">
+                    <h3>Fichas de Treino Digitais</h3>
+                    <p>Monte fichas personalizadas com exercícios, séries e cargas e envie para o aluno em um clique.</p>
+                </article>
+
+                <article class="recurso">
+                    <h3>Controle de Pagamentos</h3>
+                    <p>Acompanhe mensalidades pagas, pendentes e atrasadas, com lembretes automáticos de cobrança.</p>
+                </article>
+
+                <article class="recurso">
+                    <h3>Histórico e Evolução</h3>
+                    <p>Registre avaliações físicas e cargas ao longo do tempo e visualize o progresso de cada aluno.</p>
+                </article>
+
+                <article class="recurso">
+                    <h3>Comunicação pelo WhatsApp</h3>
+                    <p>Envie treinos, avisos e lembretes diretamente no WhatsApp, sem perder mensagens no meio do caminho.</p>
+                </article>
+
+                <article class="recurso">
+                    <h3>Assistente Léo</h3>
+                    <p>Tire dúvidas sobre a plataforma a qualquer hora e receba sugestões para acelerar sua rotina.</p>
+                </article>
+
+            </div>
 
         </section>
 
         <!-- Planos -->
-        <section id="planos">
+        <section id="planos" class="secao">
 
-            <p>Planos</p>
+            <div class="sec-cabecalho">
+                <span class="sec-etiqueta">Planos</span>
+                <h2 class="sec-titulo">Escolha o plano ideal para o seu momento</h2>
+                <p class="sec-subtitulo">Comece pequeno e evolua conforme sua carteira de alunos cresce. Sem fidelidade.</p>
+            </div>
+
+            <div class="grade-planos">
+
+                <article class="plano">
+                    <h3>Essencial</h3>
+                    <p class="plano-preco"><span>R$ 49,90</span>/mês</p>
+                    <ul>
+                        <li>Até 15 alunos</li>
+                        <li>Agenda e fichas de treino</li>
+                        <li>Suporte por e-mail</li>
+                    </ul>
+                    <a href="#contato" class="btn-hero btn-secundario">Escolher plano</a>
+                </article>
+
+                <article class="plano plano-destaque">
+                    <span class="plano-selo">Mais escolhido</span>
+                    <h3>Profissional</h3>
+                    <p class="plano-preco"><span>R$ 99,90</span>/mês</p>
+                    <ul>
+                        <li>Até 60 alunos</li>
+                        <li>Tudo do plano Essencial</li>
+                        <li>Controle financeiro e cobranças</li>
+                        <li>Comunicação pelo WhatsApp</li>
+                        <li>Assistente Léo incluso</li>
+                    </ul>
+                    <a href="#contato" class="btn-hero btn-primario">Começar agora</a>
+                </article>
+
+                <article class="plano">
+                    <h3>Academia</h3>
+                    <p class="plano-preco"><span>R$ 199,90</span>/mês</p>
+                    <ul>
+                        <li>Alunos ilimitados</li>
+                        <li>Vários profissionais na mesma conta</li>
+                        <li>Relatórios avançados</li>
+                        <li>Suporte prioritário</li>
+                    </ul>
+                    <a href="#contato" class="btn-hero btn-secundario">Falar com a equipe</a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="secao secao-clara">
+
+            <div class="sec-cabecalho">
+                <span class="sec-etiqueta">FAQ</span>
+                <h2 class="sec-titulo">Perguntas frequentes</h2>
+                <p class="sec-subtitulo">Não encontrou o que procurava? Use o formulário de contato abaixo.</p>
+            </div>
+
+            <div class="faq-lista">
+
+                <details class="faq-item">
+                    <summary>O AgendaFit funciona no celular?</summary>
+                    <p>Sim. A plataforma se adapta a celulares, tablets e computadores, então você pode acompanhar sua agenda e seus alunos de onde estiver.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Preciso instalar algum programa?</summary>
+                    <p>Não. Tudo funciona direto pelo navegador, sem instalação e sem configurações complicadas.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Posso cancelar a qualquer momento?</summary>
+                    <p>Pode. Não há fidelidade nem multa: você cancela quando quiser e seus dados continuam disponíveis para exportação.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Meus dados e os dos meus alunos estão seguros?</summary>
+                    <p>Sim. O acesso é protegido por login e os dados são tratados com cuidado e em conformidade com a LGPD.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>O assistente Léo substitui o personal trainer?</summary>
+                    <p>Não. O Léo ajuda com dúvidas sobre a plataforma e automatiza tarefas repetitivas. As decisões sobre os treinos continuam sendo suas.</p>
+                </details>
+
+            </div>
 
         </section>
 
         <!-- Contato -->
-        <section id="contato">
+        <section id="contato" class="secao">
 
-            <p>Contato</p>
+            <div class="contato-container">
+
+                <div class="contato-info">
+                    <span class="sec-etiqueta">Contato</span>
+                    <h2 class="sec-titulo">Fale com a nossa equipe</h2>
+                    <p class="sec-subtitulo">Envie sua dúvida ou sugestão e responderemos em até um dia útil.</p>
+                    <ul class="contato-lista">
+                        <li><span>E-mail:</span> suporte@agendafit.com.br</li>
+                        <li><span>WhatsApp:</span> (11) 99999-9999</li>
+                        <li><span>Atendimento:</span> Seg a Sex, das 8h às 18h</li>
+                    </ul>
+                </div>
+
+                <form id="form-contato" class="form-contato" novalidate>
+
+                    <div class="campo">
+                        <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+                        <input type="text" id="nome" name="nome" autocomplete="name" aria-describedby="erro-nome" required>
+                        <span class="erro-campo" id="erro-nome" aria-live="polite"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail <span class="obrigatorio">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" aria-describedby="erro-email" required>
+                        <span class="erro-campo" id="erro-email" aria-live="polite"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone <span class="opcional">(opcional)</span></label>
+                        <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(11) 99999-9999" aria-describedby="erro-telefone">
+                        <span class="erro-campo" id="erro-telefone" aria-live="polite"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">Assunto <span class="obrigatorio">*</span></label>
+                        <select id="assunto" name="assunto" aria-describedby="erro-assunto" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="duvida">Dúvida sobre a plataforma</option>
+                            <option value="planos">Planos e preços</option>
+                            <option value="suporte">Suporte técnico</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <span class="erro-campo" id="erro-assunto" aria-live="polite"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem <span class="obrigatorio">*</span></label>
+                        <textarea id="mensagem" name="mensagem" rows="5" maxlength="500" aria-describedby="erro-mensagem contador-mensagem" required></textarea>
+                        <div class="campo-rodape">
+                            <span class="erro-campo" id="erro-mensagem" aria-live="polite"></span>
+                            <span class="contador" id="contador-mensagem">0/500</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-hero btn-primario btn-enviar">Enviar mensagem</button>
+
+                    <p id="form-feedback" class="form-feedback" role="status" hidden></p>
+
+                </form>
+
+            </div>
 
         </section>
 
