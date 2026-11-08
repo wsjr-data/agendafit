@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="css/chat.css">
 
+    <script src="js/chat.js" defer></script>
+
 </head>
 
 <body>
@@ -241,37 +243,56 @@
 
         </div>
 
-            <!-- assistente -->
-
     </footer>
-        <!-- Widget do Assistente Léo -->
-        <div id="chat-widget" class="chat-widget">
-    <button id="chat-toggle" class="chat-toggle">
-    <img src="fotos/leo_avatar.png" alt="Léo AI" class="avatar-icon">
-    <span>Conversar com o Léo</span>
-    </button>
-  
-        <div id="chat-box" class="chat-box hidden">
-        <div class="chat-header">
-        <div class="chat-header-info">
-        <img src="fotos/leo_avatar.png" alt="Léo AI" class="avatar-header">
-        <div>
-          <strong>Léo</strong>
-          <span class="status-online">● Online</span>
-        </div>
-        </div>
-      <button id="chat-close">&times;</button>
-        </div>
-        <div id="chat-messages" class="chat-messages">
-      <div class="message bot">Olá! Sou o Léo, assistente inteligente do AgendaFit. Como posso ajudar você hoje?</div>
-        </div>
-    <form id="chat-form" class="chat-input-area">
-      <input type="text" id="chat-input" placeholder="Digite sua dúvida..." required autocomplete="off" />
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-</div>
 
-    <script src="js/chat.js"></script>
+    <!--WIDGET DO ASSISTENTE VIRTUAL LÉO-->
+    <div id="chat-widget" class="chat-widget">
+
+        <!-- Botão Flutuante para Abrir/Fechar o Chat -->
+        <button id="chat-toggle" class="chat-toggle">
+
+            <img src="fotos/leo_avatar.png" alt="Léo AI" class="avatar-icon">
+            <span>Conversar com o Léo</span>
+
+        </button>
+
+        <!-- Janela de Conversa do Chat -->
+        <div id="chat-box" class="chat-box hidden">
+
+            <!-- Cabeçalho do Chat -->
+            <div class="chat-header">
+
+                <div class="chat-header-info">
+
+                    <img src="fotos/leo_avatar.png" alt="Léo AI" class="avatar-header">
+
+                    <div>
+                        <strong>Léo</strong>
+                        <span class="status-online">● Online</span>
+                    </div>
+
+                </div>
+
+                <button id="chat-close" aria-label="Fechar chat">&times;</button>
+
+            </div>
+
+            <!-- Área de Mensagens -->
+            <div id="chat-messages" class="chat-messages">
+                <div class="message bot">Olá! Sou o Léo, assistente inteligente do AgendaFit. Como posso ajudar você hoje?</div>
+            </div>
+
+            <!-- Campo de Envio de Mensagem -->
+            <form id="chat-form" class="chat-input-area">
+
+                <input type="text" id="chat-input" placeholder="Digite sua dúvida..." required autocomplete="off">
+                <button type="submit">Enviar</button>
+                
+            </form>
+
+        </div>
+
+    </div>
+
 </body>
 </html>
